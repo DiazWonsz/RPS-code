@@ -1,0 +1,97 @@
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            while (true)
+            {
+          
+                string[] Game = { "Rock", "Paper", "Scissors" };
+                Console.WriteLine("Rock, Paper or Scissors?");
+                Console.Write("Your choice: ");
+                string choice = Console.ReadLine();
+                if (choice == "Rock")
+                {
+                    Random CPU = new Random();
+                    int index = CPU.Next(Game.Length);
+                    switch (index)
+                    {
+                        case 0:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.WriteLine("It's a DRAW!");
+                            break;
+                        case 1:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("LOSE!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+
+                            break;
+                        case 2:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("WIN!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+                }
+                else if (choice == "Paper")
+                {
+                    Random CPU = new Random();
+                    int index = CPU.Next(Game.Length);
+                    switch (index)
+                    { 
+                        case 0:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("WIN!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                        case 1:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.WriteLine("It's a DRAW!!");
+                            break;
+                        case 2:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("LOSE!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+                }
+                else if (choice == "Scissors")
+                {
+                    Random CPU = new Random();
+                    int index = CPU.Next(Game.Length);
+                    switch (index)
+                    {
+                        case 0:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("LOSE!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                        case 1:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.Write("You ");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("WIN!!");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                        case 2:
+                            Console.WriteLine("CPU picked " + Game[index]);
+                            Console.WriteLine("it's a DRAW!!");
+                            break;
+                    }     
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
